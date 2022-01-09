@@ -1,0 +1,19 @@
+package com.android.systemui.settings;
+
+import com.android.systemui.settings.UserTracker;
+import java.util.function.Predicate;
+import kotlin.jvm.internal.Intrinsics;
+
+/* compiled from: UserTrackerImpl.kt */
+final class UserTrackerImpl$removeCallback$1$1 implements Predicate<DataItem> {
+    final /* synthetic */ UserTracker.Callback $callback;
+
+    UserTrackerImpl$removeCallback$1$1(UserTracker.Callback callback) {
+        this.$callback = callback;
+    }
+
+    public final boolean test(DataItem dataItem) {
+        Intrinsics.checkNotNullParameter(dataItem, "it");
+        return dataItem.sameOrEmpty(this.$callback);
+    }
+}
